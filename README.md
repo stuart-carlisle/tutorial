@@ -1,9 +1,9 @@
 
 > Open this page at [https://stuart-carlisle.github.io/tutorial/](https://stuart-carlisle.github.io/tutorial/)
 
-##tutorials
+## Tutorials
 
-*[tutorial](/tutorial)
+*[tutorial](/tutorial/tutorial)
 
 ## Edit this project
 
