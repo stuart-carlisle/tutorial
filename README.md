@@ -1,14 +1,9 @@
 
 > Open this page at [https://stuart-carlisle.github.io/tutorial/](https://stuart-carlisle.github.io/tutorial/)
 
-## Use as Extension
+##tutorials
 
-This repository can be added as an **extension** in MakeCode.
-
-* open [https://makecode.microbit.org/](https://makecode.microbit.org/)
-* click on **New Project**
-* click on **Extensions** under the gearwheel menu
-* search for **https://github.com/stuart-carlisle/tutorial** and import
+*[tutorial](/tutorial)
 
 ## Edit this project
 
