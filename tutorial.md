@@ -35,4 +35,11 @@ let hand = 0;
 input.onGesture(Gesture.Shake, function() {
     hand = 0
 })
+turtle.setPosition(0, 0)
+turtle.pen(TurtlePenMode.Down)
+turtle.setBrightness(255)
+for (let index = 0; index < 4; index++) {
+    turtle.turnRight()
+    turtle.forward(2)
+}
 ```
