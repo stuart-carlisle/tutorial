@@ -1,6 +1,9 @@
 ```package
 microturtle=github:microsoft/pxt-microturtle
 ```
+```package
+servos=github:microsoft/pxt-common-packages/libs/servo/servo
+``` 
 
 # tutorial
 ## step 1
