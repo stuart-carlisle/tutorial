@@ -34,6 +34,7 @@ Click on the ``||variables:Variables||`` category in the Toolbox again. You'll n
 let hand = 0;
 input.onGesture(Gesture.Shake, function() {
     hand = 0
+    servos.P0.setAngle(position)
 })
 turtle.setPosition(0, 0)
 turtle.pen(TurtlePenMode.Down)
