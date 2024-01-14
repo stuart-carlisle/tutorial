@@ -2,7 +2,7 @@
 microturtle=github:microsoft/pxt-microturtle
 ```
 ```package
-servos=github:microsoft/pxt-servo
+servos=https://github.com/microsoft/pxt-common-packages/blob/9c7b6e3f7b11a1f1d9f53ae6dec235a0619c31a0/libs/servo/servo.ts
 ``` 
 
 # tutorial
