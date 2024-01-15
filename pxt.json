@@ -1,6 +1,5 @@
 {
     "name": "tutorial - Copy",
-    "version": "0.0.8",
     "description": "",
     "dependencies": {
         "core": "*",
@@ -11,6 +10,7 @@
         "main.ts",
         "README.md",
         "tutorial.md",
+        "magic_8.md",
         "tutorial-info-cache.json"
     ],
     "testFiles": [
