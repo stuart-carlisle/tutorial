@@ -4,14 +4,14 @@ We're going to make a magic 8 bal that when shookanswers your question with a ge
 
 ## Step 1
 To start, bin the ``||basic: Forever||`` block by dragging it across to the menu and letting go. 
-Now we need the 8 number to be seen at the start. Inside the ``||basic: onStart||`` block
-``||basic: showNumber||`` to display a number **8** on the screen
+Now we need the 8 number to be seen at the start. Inside the ``||basic: on start||`` block
+``||basic: show number||`` to display a number **8** on the screen
 ```blocks
     basic.showNumber(8)
 ```
 
 ## Step 2
-Grab an ``||input: onShake||`` block from the ``||input: Input||`` tab. This will allow to shake the Magic 8 Ball to reveal it's answer.
+Grab an ``||input: on shake||`` block from the ``||input: Input||`` tab. Drag into the open space anywhere in the window. This will allow to shake the Magic 8 Ball to reveal it's answer.
 ```blocks
     input.onGesture(Gesture.Shake, function () {
 
@@ -20,7 +20,7 @@ Grab an ``||input: onShake||`` block from the ``||input: Input||`` tab. This wil
 ```
 
 ## Step 3
-Now select a ``||basic: clearScreen||`` block and place it inside the ``||input: onShake||`` block to remove the 8 from the screen
+Now select a ``||basic: clear screen||`` block and place it inside the ``||input: on shake||`` block to remove the 8 from the screen when the microbit is shook.
 ```blocks
     input.onGesture(Gesture.Shake, function () {
         basic.clearScreen()
@@ -29,21 +29,21 @@ Now select a ``||basic: clearScreen||`` block and place it inside the ``||input:
 ```
 
 ## Step 4
-Next, we need to make a variable to store a random number into.  Go to the ``||variable: Variable||`` tab and create a ``||variable: new Variable||``. 
-Give it a name such as **option** but you can choose any name and set it to a value of **0**. Place it underneath the clearScreen command inside your ``||input: onShake||`` block.
+Next, we need to make a variable to store a random number into.  Go to the ``||variable: Variables||`` tab and ``||variable: make a new variable||``. 
+Type in a name such as **option** (you can choose any name you wish for a variable though). Drag across the ``||variable: set variable to 0||`` block and place it underneath the ``||basic: clear screen``|| block inside your ``||input: on shake||`` block.
 ```blocks
 input.onGesture(Gesture.Shake, function() {
-clearScreen()
+basic.clearScreen()
 option=0
 })
     basic.showNumber(8)
 ```
 ## Step 5
-Now we need the variable to be set randomly.  Use the ``||math: pickRandom||`` block and replace the zero in your set variable statement
+Change the variable from zero to a random number. Use the ``||math: pick random||`` block and drag it to the zero in your ``||variable: set variable||`` statement
 from the last step.  Finally, change the value so that the microbit randomly chooses a number between 1 and 3.
 ```blocks
 input.onGesture(Gesture.Shake, function () {
-    clearScreen()
+    basic.clearScreen()
     option = randint(1, 3)
 })
 basic.showNumber(8)
@@ -54,7 +54,7 @@ We now need to give a different response for each random number. Use an ``||logi
 random number you just defined
 ```blocks
 input.onGesture(Gesture.Shake, function () {
-    clearScreen()
+    basic.clearScreen()
     option = randint(1, 3)
     if(true){
     }else{
@@ -63,12 +63,12 @@ input.onGesture(Gesture.Shake, function () {
 basic.showNumber(8)
 ```
 ## Step 7
-Add a ``||logic: Comparison Operator||`` of the **'='** type into the if block
-then use the ``||variable: option||`` or whatever you named your variable at the start and 
-set to see if option is equal to 3 
+Add a comparison operator, the ``||logic: 0 = 0||`` type and drop it into the if block
+where it says **true**. then drag into the first zero ``||variable: your variable||`` and add
+a 3 in place of the second zero to see if your random number is equal to 3.
 ```blocks
 input.onGesture(Gesture.Shake, function () {
-    clearScreen()
+    basic.clearScreen()
     option = randint(1, 3)
     if(option==3){
     }else{
@@ -78,14 +78,14 @@ basic.showNumber(8)
 ```
 
 ## Step 8
-If it is **'3'** then write a string inside the **'if'** part of the if-else block
-Use ``||basic: showString||`` to show a positive message like "Yes, of course"
+Use ``||basic: showString||`` to show a positive answer like **'Yes'**
+drop it inside the ``||logic: if block||``.
 ```blocks
 input.onGesture(Gesture.Shake, function () {
-    clearScreen()
+    basic.clearScreen()
     option = randint(1, 3)
     if(option==3){
-        basic.showString("Yes, of course")
+        basic.showString("Yes!")
     }else{
     }
 })
@@ -95,15 +95,15 @@ basic.showNumber(8)
 ## Step 9
 As we have 3 options for our random number 1, 2 or 3 we need another two possibilities on the if-else block.
 Click the plus button on the bottom of the ``||logic: if-else||`` block to get another option and add in code to see
-if the random number (your variable) is 2, show a string that says a negative message like **'No way Jose'**
+if the random number (your variable) is 2, show a string that says a negative answer like **'No!'**
 ```blocks
 input.onGesture(Gesture.Shake, function () {
-    clearScreen()
+    basic.clearScreen()
     option = randint(1, 3)
     if(option==3){
-        basic.showString("Yes, of course")
+        basic.showString("Yes!")
     }else if(option==2){
-        basic.showString("No way Jose!")
+        basic.showString("No!")
     }else{
     }
 })
@@ -111,35 +111,35 @@ basic.showNumber(8)
 ```
 
 ## Step 10
-In the else part of the if-else block add a maybe response like 'Could happen'
+In the else part of the if-else block add a maybe response like **'maybe'**
 ```blocks
 input.onGesture(Gesture.Shake, function () {
-    clearScreen()
+    basic.clearScreen()
     option = randint(1, 3)
     if(option==3){
-        basic.showString("Yes, of course")
+        basic.showString("Yes!")
     }else if(option==2){
-        basic.showString("No way Jose!")
+        basic.showString("No!")
     }else{
-        basic.showString("Could happen")
+        basic.showString("Maybe!")
     }
 })
 basic.showNumber(8)
 ```
 
 ## Step 11
-Now add code **after** the if-else block but still inside the ``||input: onShake||`` block to set the back to the number 8 like we had at the start
+Now add code **after** the if-else block but still inside the ``||input: onShake||`` block to set the back to the number **8** like we had at the start
 using ``||basic: showNumber||`` block again.
 ```blocks
 input.onGesture(Gesture.Shake, function () {
-    clearScreen()
+    basic.clearScreen()
     option = randint(1, 3)
     if(option==3){
-        basic.showString("Yes, of course")
+        basic.showString("Yes!")
     }else if(option==2){
-        basic.showString("No way Jose!")
+        basic.showString("No!")
     }else{
-        basic.showString("Could happen")
+        basic.showString("Maybe!")
     }
     basic.showNumber(8)
 })
@@ -154,17 +154,17 @@ music tab.  Keep it as play in the background. Choose an appropriate sound.
 
 ```blocks
 input.onGesture(Gesture.Shake, function () {
-    clearScreen()
+    basic.clearScreen()
     option = randint(1, 3)
     if(option==3){
         music._playDefaultBackground(music.builtInPlayableMelody(Melodies.Entertainer), music.PlaybackMode.InBackground)
-        basic.showString("Yes, of course")
+        basic.showString("Yes!")
     }else if(option==2){
         music._playDefaultBackground(music.builtInPlayableMelody(Melodies.Funeral), music.PlaybackMode.InBackground)
-        basic.showString("No way Jose!")
+        basic.showString("No!")
     }else{
         music._playDefaultBackground(music.builtInPlayableMelody(Melodies.Prelude), music.PlaybackMode.InBackground)
-        basic.showString("Could happen")
+        basic.showString("Maybe!")
     }
     basic.showNumber(8)
 })
