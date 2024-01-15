@@ -3,8 +3,9 @@ We're going to make a magic 8 bal that when shookanswers your question with a ge
 
 
 ## Step 1
-To start, we need the 8 number to be seen at the start. Use an ``||basic: onStart||`` block from the basics tab
-display a number **8** on the screen using ``||basic: showNumber||``
+To start, bin the ``||basic: Forever||`` block by dragging it across to the menu and letting go. 
+Now we need the 8 number to be seen at the start. Inside the ``||basic: onStart||`` block
+``||basic: showNumber||`` to display a number **8** on the screen
 ```blocks
     basic.showNumber(8)
 ```
@@ -31,7 +32,6 @@ Now select a ``||basic: clearScreen||`` block and place it inside the ``||input:
 Next, we need to make a variable to store a random number into.  Go to the ``||variable: Variable||`` tab and create a ``||variable: new Variable||``. 
 Give it a name such as **option** but you can choose any name and set it to a value of **0**. Place it underneath the clearScreen command inside your ``||input: onShake||`` block.
 ```blocks
-
 input.onGesture(Gesture.Shake, function() {
 clearScreen()
 option=0
