@@ -30,7 +30,7 @@ Now select a ``||basic: clear screen||`` block and place it inside the ``||input
 
 ## Step 4
 Next, we need to make a variable to store a random number into.  Go to the ``||variable: Variables||`` tab and ``||variable: make a new variable||``. 
-Type in a name such as **option** (you can choose any name you wish for a variable though). Drag across the ``||variable: set variable to 0||`` block and place it underneath the ``||basic: clear screen``|| block inside your ``||input: on shake||`` block.
+Type in a name such as **option** (you can choose any name you wish for a variable though). Drag across the ``||variable: set variable to 0||`` block and place it underneath the ``||basic: clear screen||`` block inside your ``||input: on shake||`` block.
 ```blocks
 input.onGesture(Gesture.Shake, function() {
 basic.clearScreen()
@@ -64,7 +64,20 @@ basic.showNumber(8)
 ```
 ## Step 7
 Add a comparison operator, the ``||logic: 0 = 0||`` type and drop it into the if block
-where it says **true**. then drag into the first zero ``||variable: your variable||`` and add
+where it says **true**.
+```blocks
+input.onGesture(Gesture.Shake, function () {
+    basic.clearScreen()
+    option = randint(1, 3)
+    if(0==0){
+    }else{
+    }
+})
+basic.showNumber(8)
+```
+
+## Step 8
+Then drag ``||variable: your variable||`` onto the first zero and add
 a 3 in place of the second zero to see if your random number is equal to 3.
 ```blocks
 input.onGesture(Gesture.Shake, function () {
@@ -77,7 +90,7 @@ input.onGesture(Gesture.Shake, function () {
 basic.showNumber(8)
 ```
 
-## Step 8
+## Step 9
 Use ``||basic: showString||`` to show a positive answer like **'Yes'**
 drop it inside the ``||logic: if block||``.
 ```blocks
@@ -92,7 +105,7 @@ input.onGesture(Gesture.Shake, function () {
 basic.showNumber(8)
 ```
 
-## Step 9
+## Step 10
 As we have 3 options for our random number 1, 2 or 3 we need another two possibilities on the if-else block.
 Click the plus button on the bottom of the ``||logic: if-else||`` block to get another option and add in code to see
 if the random number (your variable) is 2, show a string that says a negative answer like **'No!'**
@@ -110,7 +123,7 @@ input.onGesture(Gesture.Shake, function () {
 basic.showNumber(8)
 ```
 
-## Step 10
+## Step 11
 In the else part of the if-else block add a maybe response like **'maybe'**
 ```blocks
 input.onGesture(Gesture.Shake, function () {
@@ -127,7 +140,7 @@ input.onGesture(Gesture.Shake, function () {
 basic.showNumber(8)
 ```
 
-## Step 11
+## Step 12
 Now add code **after** the if-else block but still inside the ``||input: onShake||`` block to set the back to the number **8** like we had at the start
 using ``||basic: showNumber||`` block again.
 ```blocks
@@ -146,7 +159,7 @@ input.onGesture(Gesture.Shake, function () {
 basic.showNumber(8)
 ```
 
-## Step 12
+## Step 13
 Check the simulator, you should now have a working magic 8 ball.  Finally to make it more fun
 Add in some melodies that play for each option where you put your response string. Use ``||music: play||`` in the advanced section of the 
 music tab.  Keep it as play in the background. Choose an appropriate sound.
@@ -171,7 +184,7 @@ input.onGesture(Gesture.Shake, function () {
 basic.showNumber(8)
 ```
 
-## Step 13
+## Step 14
 The final step is to download the file and transfer it to your microbit. Ask it a yes-no question and see what it says when you shake it.
 Use double sided tape or a loop of tape to attach it to a black cardboard disc with a white centre to make it look like a real magic 8 ball.
 Remember to add on the battery pack and stick that on aswell, you could add a small slit to allow you to mount the battery pack on the rear and 
