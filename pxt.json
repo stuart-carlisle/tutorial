@@ -12,7 +12,8 @@
         "README.md",
         "tutorial.md",
         "magic_8.md",
-        "tutorial-info-cache.json"
+        "tutorial-info-cache.json",
+        "catapult1.md"
     ],
     "testFiles": [
         "test.ts"
